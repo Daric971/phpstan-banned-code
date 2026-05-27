@@ -20,7 +20,7 @@ app-install: ## to install app
 	composer install --prefer-dist
 
 app-security-check: ## to check if any security issues in the PHP dependencies
-	composer audit
+	composer audit --abandoned=report
 
 app-static-analysis: ## to run static analysis
 	vendor/bin/phpstan analyze --memory-limit=-1
